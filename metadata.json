@@ -1,0 +1,36 @@
+{
+  "model": {
+    "base_model": "gpt-5-mini",
+    "hardcoded_runtime_model": "gpt-4o",
+    "provider": "ChatOpenAI"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": null,    
+    "determinism_note": "Temperature 0 suggests deterministic behavior, but OpenAI does not guarantee bit-for-bit reproducibility."
+  },
+  "retrieval": {
+    "primary": "OpenAlex",
+    "secondary": "DuckDuckGo Search",
+    "papers_per_query_limit": 10,
+    "graph_scale_nodes": "120-210",
+    "graph_scale_edges": "150-260",
+    "dynamic": true,
+    "query_refinement": "LLM-driven heuristic",
+    "determinism": "non-deterministic corpus + ranking variance"
+  },
+  "graph_pipeline": {
+    "triplet_extraction": "LLM TripletList prompt",
+    "normalization": "lowercasing + heuristic deduplication",
+    "densification": "optional",
+    "symbolic_paths": "networkx max depth 5",
+    "path_selection": "diversity enforced via Jaccard filtering"
+  },
+  "execution_policy": {
+    "runs_per_query": 1,
+    "filtering": "none",
+    "technical_retry": "Q5 rerun after Unicode crash",
+    "collapses_preserved": true
+  }
+}
