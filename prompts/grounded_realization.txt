@@ -1,0 +1,8 @@
+"I have identified two distinct clusters of knowledge in the graph that seem currently disconnected: Cluster A (Theme 1): {cluster_a_nodes} Cluster B (Theme 2): {cluster_b_nodes}
+
+Your Task: Act as a visionary scientist using the lens of '{lens}'.
+
+Analyze potential 'Structural Holes' (missing links) between these two clusters.
+Ask yourself: Is there a plausible underlying mechanism that could connect Cluster A to Cluster B?
+If YES, propose a 'Bridge Hypothesis' explaining this mechanism.
+If NO, explicitly state that they are distinct."
